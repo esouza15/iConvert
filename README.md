@@ -99,45 +99,6 @@ iConvert> converter 2 hr min
 
 ---
 
-# 🧭 Publicação no GitHub
-
-## ✔️ 1. Criar o repositório
-
-1. Acesse https://github.com  
-2. Clique em **New Repository**  
-3. Nome: `iConvert`  
-4. (Opcional) Marque "Add a README"  
-5. Clique em **Create Repository**
-
----
-
-## ✔️ 2. Publicar via Git (Terminal)
-
-```bash
-git init
-git add iConvert.py
-git commit -m "Primeira versão do iConvert"
-git branch -M main
-git remote add origin https://github.com/SEU_USUARIO/iConvert.git
-git push -u origin main
-```
-
-Se seu repositório usar `master`:
-
-```bash
-git push -u origin master
-```
-
----
-
-## ✔️ 3. Enviar sem terminal (modo mais fácil)
-
-1. Abra seu repositório no GitHub  
-2. Clique em **Add file → Upload files**  
-3. Envie `iConvert.py`  
-4. Clique em **Commit changes**
-
----
 
 ## 👨‍💻 Autor
 
