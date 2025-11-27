@@ -49,3 +49,16 @@ O projeto aplica princípios de modularização, reutilização de componentes e
 ### **1. Instalar dependências**
 ```bash
 pip install pint click
+
+### **2. Executar conversão direta**
+```bash
+python iConvert.py converter 10 km m
+
+### **3. Executar modo interativo**
+```bash
+python iConvert.py interativo
+
+### **4. Exemplos de Uso no Modo Interativo**
+```bash
+iConvert> 10 km m
+iConvert> converter 2 hr min
