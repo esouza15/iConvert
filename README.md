@@ -50,14 +50,17 @@ O projeto aplica princípios de modularização, reutilização de componentes e
 ```bash
 pip install pint click
 
+## 📦 Convertendo diretamente
 ### **2. Executar conversão direta**
 ```bash
 python iConvert.py converter 10 km m
 
+## 📦 Modo interatio
 ### **3. Executar modo interativo**
 ```bash
 python iConvert.py interativo
 
+## 📦 Como uar o interativo
 ### **4. Exemplos de Uso no Modo Interativo**
 ```bash
 iConvert> 10 km m
