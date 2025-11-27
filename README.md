@@ -1,73 +1,151 @@
 # 📘 iConvert – Conversor de Unidades em Python
 
-Um app de conversão de unidades desenvolvido para atividade acadêmica do curso superior em TI.  
-O projeto aplica princípios de modularização, reutilização de componentes e boas práticas de CLI com Python.
+Um app de conversão de unidades desenvolvido como atividade acadêmica no curso superior em TI.  
+O projeto demonstra modularização, reutilização de componentes e boas práticas de CLI utilizando Python.
 
 ---
 
 ## 🚀 Funcionalidades Principais
 
 - Conversão de unidades usando a biblioteca **Pint**
-- CLI interativo e inteligente usando **Click**
-- Tratamento robusto de erros:
+- CLI interativo usando **Click**
+- Tratamento de erros:
   - Unidades inexistentes
-  - Incompatibilidade dimensional (ex: metros → quilos)
+  - Dimensões incompatíveis
   - Valores inválidos
-- Modo de conversão rápida:
-  - `python iConvert.py converter 10 km m`
-- Modo interativo:
-  - `python iConvert.py interativo`
+- Conversão rápida via terminal  
+  Ex:  
+  ```bash
+  python iConvert.py converter 10 km m
+  ```
+- Modo interativo  
+  ```bash
+  python iConvert.py interativo
+  ```
 
 ---
 
 ## 🧩 Arquitetura dos Componentes
 
-### **1. UnitManager (Componente Reutilizado)**
+### 🔹 1. Componente Reutilizado — `UnitManager`
 - Implementa o padrão **Singleton**
-- Gerencia uma instância única da biblioteca **Pint**
-- Fornece o `UnitRegistry()` configurado
-- Facilita uso em outros projetos
+- Gerencia uma instância única do **UnitRegistry** (Pint)
+- Facilita a reutilização em outros projetos
 
-### **2. ConverterService (Desenvolvimento Próprio)**
-- Lógica de conversão isolada
-- Não usa `print()` nem `input()`
-- Pode ser reaproveitado em:
-  - APIs (FastAPI, Flask)
-  - Automação de dados
-  - Aplicações desktop
-  - Outros scripts Python
+### 🔹 2. Componente Desenvolvido — `ConverterService`
+- Lógica de conversão encapsulada
+- Não usa `input()` ou `print()`
+- Reutilizável em:
+  - APIs Python
+  - Scripts de automação
+  - Apps desktop
+  - CLI
 
-### **3. CLI com Click**
-- Comando `converter`
-- Modo interativo (`interativo`)
+### 🔹 3. Interface CLI com Click
+- Comando `converter` (one-shot)
+- Comando `interativo`
 - Mensagens coloridas (feedback intuitivo)
 
 ---
 
-## 📦 Como executar
+## 📦 Como executar o projeto
 
-### **1. Instalar dependências**
+### 1. Instale as dependências
 ```bash
 pip install pint click
+```
 
----
-
-## 📦 Convertendo diretamente
-### **2. Executar conversão direta**
+### 2. Execução direta
 ```bash
 python iConvert.py converter 10 km m
+```
 
----
-
-## 📦 Modo interatio
-### **3. Executar modo interativo**
+### 3. Modo interativo
 ```bash
 python iConvert.py interativo
+```
 
 ---
 
-## 📦 Como uar o interativo
-### **4. Exemplos de Uso no Modo Interativo**
+## 🧪 Exemplos de Uso
+
+### Conversão simples:
 ```bash
+python iConvert.py converter 100 m cm
+```
+
+### No modo interativo:
+```
 iConvert> 10 km m
 iConvert> converter 2 hr min
+```
+
+---
+
+## 🗂 Estrutura do Projeto
+
+```
+├── iConvert.py
+└── README.md
+```
+
+---
+
+## 📘 Tecnologias Utilizadas
+
+- **Python 3**
+- **Pint** – Biblioteca para unidades físicas
+- **Click** – Construção de CLI profissionais
+
+---
+
+# 🧭 Publicação no GitHub
+
+## ✔️ 1. Criar o repositório
+
+1. Acesse https://github.com  
+2. Clique em **New Repository**  
+3. Nome: `iConvert`  
+4. (Opcional) Marque "Add a README"  
+5. Clique em **Create Repository**
+
+---
+
+## ✔️ 2. Publicar via Git (Terminal)
+
+```bash
+git init
+git add iConvert.py
+git commit -m "Primeira versão do iConvert"
+git branch -M main
+git remote add origin https://github.com/SEU_USUARIO/iConvert.git
+git push -u origin main
+```
+
+Se seu repositório usar `master`:
+
+```bash
+git push -u origin master
+```
+
+---
+
+## ✔️ 3. Enviar sem terminal (modo mais fácil)
+
+1. Abra seu repositório no GitHub  
+2. Clique em **Add file → Upload files**  
+3. Envie `iConvert.py`  
+4. Clique em **Commit changes**
+
+---
+
+## 👨‍💻 Autor
+
+**Esthefison Souza**  
+Desenvolvimento do app como parte da atividade acadêmica em Tecnologia da Informação.
+
+---
+
+## 📝 Licença
+
+Este projeto pode ser utilizado livremente para fins acadêmicos, educacionais ou de demonstração.
